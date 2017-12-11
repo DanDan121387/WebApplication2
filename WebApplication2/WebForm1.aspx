@@ -43,17 +43,19 @@ wx.ready(function () {
 	<div class="zhengji_baidi">
     	<form id="tijiao" action="?Action=zhengji" method="post" runat="server"  enctype ="multipart/form-data">
     	<ul>
-    	    <li><label>作者姓名</label><input type="text" required name="authorName"></li>
+    	    <li><label>作者姓名</label><input type="text" required name="AuthorName"></li>
 
-            <li><label>联系电话</label><input type="text" required name="telephone" id="telephone" pattern="[0-9]*"></li>
-            <li><label>所在单位</label><input type="text" required name="unit"></li>
+            <li><label>联系电话</label><input type="text" required name="AuthorTelephone" id="telephone" pattern="[0-9]*"></li>
+            <li><label>所在单位</label><input type="text" required name="AuthorUnit"></li>
              
             <li><asp:FileUpload ID="MyFileUploadVoice" runat="server" /> 
         <asp:Button ID="FileUploadButtonVoice" runat="server" Text="上传音频" 
             onclick="FileUploadButtonVoice_Click" /></li>
-            <li><asp:FileUpload ID="FileUploadVedio" runat="server" /> 
-        <asp:Button ID="FileUploadButtonVido" runat="server" Text="上传视频" 
-            onclick="FileUploadButtonVoice_Click" /></li>
+           
+             <li><asp:FileUpload ID="MyFileUploadVedio" runat="server" /> 
+        <asp:Button ID="FileUploadButtonVideo" runat="server" Text="上传视频" 
+            onclick="FileUploadButtonVideo_Click" /></li>
+            
             <li><label>文字祝福</label><textarea required name="introduction" rows="5" placeholder="50字以内简要描述祝福内容"></textarea></li>
             <li><asp:Button ID="Button1" runat="server" Text="完成上传"  onclick="Button1_Click"/></li>
         </ul>
